@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Sonsie+One');
+
+body {
+	background: #F62459;
+	min-height: 100%;
+}
+
+h1 {
+	position: relative;
+	left: 15%;
+	top: 200px;
+	color: #F48FB1;
+	font-size: 120px;
+	font-weight: bold;
+	font-family: 'Pacifico', cursive;
+}
+
+@keyframes loading {
+	from { max-width: 0; }
+}
+
+h1::before {
+	content: attr(data-content);
+	position: absolute;
+	overflow: hidden;
+	max-width: 4em;
+	color: white;
+	animation: loading 5s linear;
+}
